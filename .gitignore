@@ -1,0 +1,15 @@
+*.exe
+*.dll
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.zip
+*.rar
+*.iso
+*.log
+
+__pycache__/
+*.pyc
+node_modules/
+*.db

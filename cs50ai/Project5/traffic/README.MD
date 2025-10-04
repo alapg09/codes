@@ -1,0 +1,7 @@
+# Traffic Sign Classification: Experimentation Report
+
+To build an effective model for classifying traffic signs, I started with a simple convolutional neural network consisting of a single `Conv2D` layer with 32 filters, followed by a max pooling layer, a dense layer of 128 units, and dropout. This baseline achieved around 91% accuracy on the validation set after 10 epochs. To improve performance, I increased the number of filters in the initial convolutional layer to 64 and observed a slight increase in accuracy (92–93%), but the model still struggled with generalization beyond a point.
+
+Next, I experimented by adding a second convolutional-pooling block. Initially, I used 32 filters in the first layer and 64 in the second. This structure improved performance to about 94%, though the training time increased slightly. I also tried increasing the dense layer size to 256 units and tested different dropout rates (0.3, 0.4, and 0.5). A 0.5 dropout with a 256-unit dense layer showed promising results.
+
+Eventually, I settled on a model with two `Conv2D` layers (both with 64 filters and kernel size (3,3)), each followed by `MaxPooling2D` layers, then flattened and passed through a dense layer of 512 units with ReLU activation and a dropout rate of 0.5. This final configuration gave me the best results, achieving around **95.3% accuracy** on the test set. This architecture balanced model complexity with performance, and generalization improved due to the deeper structure and regularization from dropout.
