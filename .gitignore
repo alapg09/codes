@@ -9,7 +9,54 @@
 *.iso
 *.log
 
+# Python
 __pycache__/
 *.pyc
-node_modules/
 *.db
+
+# Node
+node_modules/
+
+# Java / JVM
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+*.class
+*.log
+
+# Maven / Gradle / Java build dirs
+target/
+build/
+out/
+bin/
+.gradle/
+.mvn/
+lib/
+
+# IDE files
+.idea/
+*.iml
+*.iws
+*.ipr
+.project
+.classpath
+.settings/
+.vscode/
+*.code-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Other
+*.log
+*.sql
+*.sqlite
+.env
+.venv/
+venv/
