@@ -78,7 +78,7 @@ public:
             current = next;
         }
     }
-
+    
     Node *getHead()
     {
         return head;
@@ -366,27 +366,49 @@ public:
             curr = prev->next;
         }
     }
+
+
+
+
+    // detecting a cycle.
+    bool detectCycle(){
+        Node* fast = head;
+        Node* slow = head;
+
+        while(fast != nullptr && fast->next != nullptr && slow != nullptr){
+            slow = slow->next;
+            fast = fast->next->next;
+            
+            if (fast == slow){
+                return true;
+            }
+        }
+
+        return false;
+    }
 };
 
 int main()
 {
-    LinkedList l1;
-    // LinkedList l2;
 
-    l1.addAtEnd(1);
-    l1.addAtEnd(2);
-    l1.addAtEnd(3);
-    l1.addAtEnd(4);
-    l1.addAtEnd(5);
 
-    cout << "\nBefore: " << endl;
-    cout << "L1: " << endl;
-    l1.print();
+    // LinkedList l1;
+    // // LinkedList l2;
 
-    l1.pairWiseSwap();
-    cout << "\nAfter: " << endl;
-    cout << "L1: " << endl;
-    l1.print();
+    // l1.addAtEnd(1);
+    // l1.addAtEnd(2);
+    // l1.addAtEnd(3);
+    // l1.addAtEnd(4);
+    // l1.addAtEnd(5);
+
+    // cout << "\nBefore: " << endl;
+    // cout << "L1: " << endl;
+    // l1.print();
+
+    // l1.pairWiseSwap();
+    // cout << "\nAfter: " << endl;
+    // cout << "L1: " << endl;
+    // l1.print();
 
     // l2.addAtEnd(4);
     // l2.addAtEnd(5);
