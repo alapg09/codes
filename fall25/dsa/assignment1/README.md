@@ -25,7 +25,7 @@ Run the program with:
 If no filename is given, the program defaults to reading from input.csv.
 Some sample grid patterns are already given as easy/hard/medium.csv
 
-The output maze is written to solved_output.csv and parent array is written to parent_array.csv
+The output maze is written to solved_output.csv and parent array is written to parent_array.csv -- they will be created on first run if not already present
  
 👤 Author
 Name: Alap Gohar
