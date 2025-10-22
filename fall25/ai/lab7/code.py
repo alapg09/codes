@@ -251,7 +251,7 @@ with OUTPUT_CSV.open("w", newline='', encoding='utf-8') as f:
     for r in results:
         writer.writerow(r)
 
-# Print summary to console
+# print summary
 print(f"Wrote {len(results)} results to {OUTPUT_CSV}\n")
 for r in results:
     print(f"Site: {r['Site']:12s} Loc: {r['Coordinates']:10s} Time: {r['CallTime']:6s} -> Station: {r['Station']:10s} Travel (min): {r['TravelTimeMin']}")
